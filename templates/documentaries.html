@@ -1,0 +1,30 @@
+{% extends 'lie.html' %}
+{% load static %}
+
+{% block title %}
+<title>Movies page</title>
+{% endblock %}
+
+{% block body_block %}
+<!-- <center><h1><b> Movies header</b></h1></center> -->
+<center>
+    <h1 id="crime">Crime Thriller Movies</h1>
+      <div class="box">
+        <a href="https://youtu.be/OdbXnboJCVw?si=Ge_p1_csZwRjWqMR"><img src="{% static 'images/army of thieves.jpg' %}" alt="No Image"></a>
+        <a href="#"><img src="{% static 'images/darkweb.jpg' %}" alt="No Image"></a>
+        <a href="#"><img src="{% static 'images/evil dead.jpg' %}" alt="No Image"></a>
+        <a href="#"><img src="{% static 'images/equalizer.jpg' %}" alt="No Image"></a>
+        <a href="#"><img src="{% static 'images/extraction2.jpg' %}" alt="No Image"></a>
+        <a href="#"><img src="{% static 'images/f9.jpg' %}" alt="No Image"></a>                
+      </div>
+      <h1 id="psycho">Psychological Movies</h1>
+      <div class="box">
+        <a href="https://youtu.be/beToTslH17s?si=h-2Y78eayUPa6gNG"><img src="{% static 'images/scream.jpg' %}" alt="No Image"></a>
+        <a href="https://youtu.be/Y-ufZuqTd5c?si=OQcsmJqtK6bQ1Qog"><img src="{% static 'images/silence.jpg' %}" alt="No Image"></a>
+        <a href="https://youtu.be/tH-dZY_6-b0?si=udYx-cjPJkFnoOZ7"><img src="{% static 'images/quiet.jpg' %}" alt="No Image"></a>
+        <a href="https://youtu.be/o6TOax_-A6w?si=YIMDlaB7E9InpMHo"><img src="{% static 'images/ghost.jpg' %}" alt="No Image"></a>
+        <a href="https://youtu.be/acQyrwQyCOk?si=XmrNkrrdnkKw6P-2"><img src="{% static 'images/insidious.jpg' %}" alt="No Image"></a>
+        <a href="https://youtu.be/Y7v0c0ZeXrU?si=6p5KRFZlLPVgULQN"><img src="{% static 'images/navarasa.jpg' %}" alt="No Image"></a>                
+      </div>
+</center>
+{% endblock %}

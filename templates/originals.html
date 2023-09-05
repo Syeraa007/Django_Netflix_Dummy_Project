@@ -1,0 +1,21 @@
+{% extends 'lie.html' %}
+{% load static %}
+
+{% block title %}
+<title>Movies page</title>
+{% endblock %}
+
+{% block body_block %}
+<!-- <center><h1><b> Movies header</b></h1></center> -->
+<center>
+    <h1 id="originals">Netflix Originals</h1>
+      <div class="box">
+        <a href="https://youtu.be/XuDwndGaCFo?si=i3z9P5TgZeNtu5rE"><img src="{% static 'images/O1.jpg' %}" alt="No Image"></a>
+        <a href="https://youtu.be/24-YonhNS0Y?si=uQve5DIUanmie8H6"><img src="{% static 'images/O2.jpg' %}" alt="No Image"></a>
+        <a href="https://youtu.be/uhU7xpk7Z0Q?si=4fl2lkUdYY-EjPMq"><img src="{% static 'images/O6.jpg' %}" alt="No Image"></a>
+        <a href="https://youtu.be/mR3ExaGGFio?si=Kek785j9_My23kul"><img src="{% static 'images/O16.jpg' %}" alt="No Image"></a>
+        <a href="https://youtu.be/SzS8Ao0H6Co?si=2mlSzlYJplW2kKiW"><img src="{% static 'images/O15.jpg' %}" alt="No Image"></a>
+        <a href="https://youtu.be/Tln328Upic0?si=2UgCKjygAxF2yF_R"><img src="{% static 'images/O13.jpg' %}" alt="No Image"></a>                
+      </div>
+</center>
+{% endblock %}

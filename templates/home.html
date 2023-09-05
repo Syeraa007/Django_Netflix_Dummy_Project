@@ -1,0 +1,259 @@
+{% extends 'lie.html' %}
+{% load static %}
+
+{% block title %}
+<title>Netflix Home page</title>
+<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+<link rel="stylesheet" href="{% static 'css/mdb.css' %}">
+<link rel="stylesheet" href="{% static 'css/all.css' %}">
+{% endblock %}
+
+{% block body_block %}
+<style>
+  .d-block w-100{
+    height: 350px;
+    width: 400px;
+  }
+</style>
+<center><br><br><br><br>
+    {% if username %}
+        <h5> Hii,Welcome Mr/Ms {{username}}, This Is Your Home_Page  </h5>
+        <br>
+        <center>
+<!--Carousel Wrapper-->
+<div id="carousel-example-1z" class="carousel slide carousel-fade" data-ride="carousel">
+  <!--Indicators-->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-1z" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-1z" data-slide-to="1"></li>
+    <li data-target="#carousel-example-1z" data-slide-to="2"></li>
+    <li data-target="#carousel-example-1z" data-slide-to="3"></li>
+    <li data-target="#carousel-example-1z" data-slide-to="4"></li>
+  </ol>
+  <!--Slides-->
+  <div class="carousel-inner" role="listbox">
+    <!--First slide-->
+    <div class="carousel-item active">
+      <a href="{% url 'tiger' %}" target="_blank">
+        <img class="d-block w-100" src="{% static 'images/tiger.jpg' %}" alt="No Tiger image">
+      </a>
+    </div>
+    <!--Second slide-->
+    <div class="carousel-item">
+      <a href="{% url 'og' %}" target="_blank">
+        <img class="d-block w-100" src="{% static 'images/og.jpg' %}" alt="No OG image">
+      </a>
+    </div>
+    <!--Third slide-->
+    <div class="carousel-item">
+      <a href="{% url 'wednesday'%}" target="_blank">
+        <img class="d-block w-100" src="{% static 'images/wednesday.webp' %}" alt="No Wednesday image">
+      </a>
+    </div>
+    <!--Fourth slide-->
+    <div class="carousel-item">
+      <a href="{% url 'antony' %}" target="_blank">
+        <img class="d-block w-100" src="{% static 'images/antony.jpeg' %}" alt="No Antony image">
+      </a>
+    </div>
+    <!--Fifth slide-->
+    <div class="carousel-item">
+      <a href="{% url 'japan' %}" target="_blank">
+        <img class="d-block w-100" src="{% static 'images/japan.jpg' %}" alt="No Japan image">
+      </a>
+    </div>
+  </div>
+  <!--Controls-->
+  <a class="carousel-control-prev" href="#carousel-example-1z" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carousel-example-1z" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+  <!--/.Controls-->
+</div>
+<!--/.Carousel Wrapper-->
+        </center>
+        <section class="main-container" >
+      <div class="location" id="home">
+          <h1 id="home">Popular on Netflix</h1>
+          <div class="box">
+            <div class="item"><a href="{% static 'images/.jpg' %}"><img src="{% static 'images/O1.jpg' %}" alt="No Image"></a></div>
+            <div class="item"><a href="{% static 'images/.jpg' %}"><img src="{% static 'images/O1.jpg' %}" alt="No Image"></a></div>
+            <div class="item"><a href="{% static 'images/.jpg' %}"><img src="{% static 'images/O1.jpg' %}" alt="No Image"></a></div>
+            <div class="item"><a href="{% static 'images/.jpg' %}"><img src="{% static 'images/O1.jpg' %}" alt="No Image"></a></div>
+            <div class="item"><a href="{% static 'images/.jpg' %}"><img src="{% static 'images/O1.jpg' %}" alt="No Image"></a></div>
+            <div class="item"><a href="{% static 'images/.jpg' %}"><img src="{% static 'images/O1.jpg' %}" alt="No Image"></a></div>
+            <div class="item"><a href="{% static 'images/.jpg' %}"><img src="{% static 'images/O1.jpg' %}" alt="No Image"></a></div>
+            <div class="item"><a href="{% static 'images/.jpg' %}"><img src="{% static 'images/O1.jpg' %}" alt="No Image"></a></div>
+            <div class="item"><a href="{% static 'images/.jpg' %}"><img src="{% static 'images/O1.jpg' %}" alt="No Image"></a></div>
+            <div class="item"><a href="{% static 'images/.jpg' %}"><img src="{% static 'images/O1.jpg' %}" alt="No Image"></a></div>
+            <div class="item"><a href="{% static 'images/.jpg' %}"><img src="{% static 'images/O1.jpg' %}" alt="No Image"></a></div>
+            <div class="item"><a href="{% static 'images/.jpg' %}"><img src="{% static 'images/O1.jpg' %}" alt="No Image"></a></div>        
+          </div>
+      </div>
+    </section> 
+    <h1 id="recent">Recently Added Movies</h1>
+      <div class="box">
+        <a href="https://youtu.be/bJJUlOC3K7I?si=ZgUr4AdGOxXmLpNo"><img src="{% static 'images/adipurush.jpg' %}" alt="No Image"></a>
+        <a href="https://youtu.be/OgKl0DK4Bc4?si=LDMxUizkWI5kwCL4"><img src="{% static 'images/chota.jpg' %}" alt="No Image"></a>
+        <a href="https://youtu.be/uua2y42QJ0E?si=fK_k1-EFrgUePcBY"><img src="{% static 'images/jagun.jpg' %}" alt="No Image"></a>
+        <a href="https://youtu.be/rRzcQP4Np8Y?si=8g1JPYckkb1LMhyl"><img src="{% static 'images/roja.jpg' %}" alt="No Image"></a>
+        <a href="https://youtu.be/q2FCfgT-Fm8?si=K_U0jvx_zEPa9TjF"><img src="{% static 'images/that time.jpg' %}" alt="No Image"></a>
+        <a href="https://youtu.be/4aanxonXWiM?si=zeJ2e7KDSBo8gYja"><img src="{% static 'images/lust.jpg' %}" alt="No Image"></a>
+        <a href="https://youtu.be/yhcoznMrfPo?si=Iex4BkF0Y_929vh6"><img src="{% static 'images/kavacham.jpg' %}" alt="No Image"></a>
+        <a href="https://youtu.be/xmGP4xsp2k8?si=QxKKaHI_ahBQIe7a"><img src="{% static 'images/eyes.jpg' %}" alt="No Image"></a>
+        <a href="https://youtu.be/Uh3tp39sao8?si=xXQgdlEaagkO2s7w"><img src="{% static 'images/no escape.jpg' %}" alt="No Image"></a>
+        <a href="https://youtu.be/9FoBxcBee7k?si=4hNM5QHoKRAAMYLU"><img src="{% static 'images/padmini.jpg' %}" alt="No Image"></a>
+        <a href="https://youtu.be/db8puvbOhQw?si=l1I9CROdrim1UM2P"><img src="{% static 'images/home.jpg' %}" alt="No Image"></a>
+        <a href="https://youtu.be/XuDwndGaCFo?si=i3z9P5TgZeNtu5rE"><img src="{% static 'images/heart.jpg' %}" alt="No Image"></a>              
+      </div>
+      <h1 id="myList">Trending Now</h1>
+      <div class="box">
+        <a href="https://youtu.be/fEIhFZtRMkM?si=FPxAdFG5Zzb2GQXQ"><img src="{% static 'images/asvins.jpg' %}" alt="No Image"></a>
+        <a href="https://youtu.be/OFVGCUIXJls?si=qf7AUZkb4-CL2jdu"><img src="{% static 'images/charlie.jpg' %}" alt="No Image"></a>
+        <a href="https://youtu.be/EqOSFhIKbRg?si=nEsqWMMTD6h1hM_k"><img src="{% static 'images/annathe.jpg' %}" alt="No Image"></a>
+        <a href="https://youtu.be/UcOpgGt06FE?si=KTYCZ575U5F_NGvG"><img src="{% static 'images/virupaksa.jpg' %}" alt="No Image"></a>
+        <a href="https://youtu.be/s5ak-NY6OC8?si=mePNAjTSd7tQIj1z"><img src="{% static 'images/don.jpg' %}" alt="No Image"></a>
+        <a href="https://youtu.be/hSxLUd8aly4?si=2YBRFJoL5bJZ8VhZ"><img src="{% static 'images/bean.jpg' %}" alt="No Image"></a>                  
+      </div>
+      
+      <h1 id="myList">Comedy Movies</h1>
+      <div class="box">
+        <a href="https://youtu.be/10r9ozshGVE?si=acmNZMrTfmDnoWTD"><img src="{% static 'images/panda.jpg' %}" alt="No Image"></a>
+        <a href="https://youtu.be/BWkP95PazWo?si=3dDPCiGtzKsAZaZ-"><img src="{% static 'images/love2day.jpg' %}" alt="No Image"></a>
+        <a href="https://youtu.be/zAUAliz1TKA?si=VNg4gyOLgvIp57gI"><img src="{% static 'images/minnal.jpg' %}" alt="No Image"></a>
+        <a href="https://youtu.be/Pj0wz7zu3Ms?si=pVcNO9IyFAuI7spB"><img src="{% static 'images/red.jpg' %}" alt="No Image"></a>
+        <a href="https://youtu.be/xZ1FXdIGf9Q?si=JP1quA4aoptPKDdM"><img src="{% static 'images/omg.jpg' %}" alt="No Image"></a>
+        <a href="https://youtu.be/RSKQ-lVsMdg?si=hGt-QHQSruHTUiAo"><img src="{% static 'images/angry.jpg' %}" alt="No Image"></a>                  
+      </div>
+      
+      <h1 id="tvShows">TV Shows</h1>
+      <div class="box">
+        <a href=""><img src="{% static 'images/dr zindagi.jpg' %}" alt="No Image"></a>
+        <a href="#"><img src="{% static 'images/emoji.jpg' %}" alt="No Image"></a>
+        <a href="#"><img src="{% static 'images/gray.jpg' %}" alt="No Image"></a>
+        <a href="#"><img src="{% static 'images/hunger.jpg' %}" alt="No Image"></a>
+        <a href="#"><img src="{% static 'images/kantara.jpg' %}" alt="No Image"></a>
+        <a href="#"><img src="{% static 'images/filip.jpg' %}" alt="No Image"></a>
+        <a href="#"><img src="{% static 'images/muthu.jpg' %}" alt="No Image"></a>
+        <a href="#"><img src="{% static 'images/mersal.jpg' %}" alt="No Image"></a>
+        <a href="#"><img src="{% static 'images/dracula.jpg' %}" alt="No Image"></a>
+        <a href="#"><img src="{% static 'images/lucy.jpg' %}" alt="No Image"></a>
+        <a href="#"><img src="{% static 'images/nobody.jpg' %}" alt="No Image"></a>
+        <a href="#"><img src="{% static 'images/mi fallout.jpg' %}" alt="No Image"></a>              
+      </div>
+
+      <h1 id="movies">Blockbuster Action & Adventure</h1>
+      <div class="box">
+        <a href="https://youtu.be/GY4BgdUSpbE?si=Rr5Z0OxwXQjWahOL"><img src="{% static 'images/rrr.jpg' %}" alt="No Image"></a>
+        <a href="#"><img src="{% static 'images/saaho.jpg' %}" alt="No Image"></a>
+        <a href="#"><img src="{% static 'images/sarkar.jpg' %}" alt="No Image"></a>
+        <a href="#"><img src="{% static 'images/secret.jpg' %}" alt="No Image"></a>
+        <a href="#"><img src="{% static 'images/wanted.jpg' %}" alt="No Image"></a>
+        <a href="#"><img src="{% static 'images/virayya.jpg' %}" alt="No Image"></a>                
+      </div>
+
+      <h1 id="crime">Crime Thriller Movies</h1>
+      <div class="box">
+        <a href="https://youtu.be/OdbXnboJCVw?si=Ge_p1_csZwRjWqMR"><img src="{% static 'images/army of thieves.jpg' %}" alt="No Image"></a>
+        <a href="#"><img src="{% static 'images/darkweb.jpg' %}" alt="No Image"></a>
+        <a href="#"><img src="{% static 'images/evil dead.jpg' %}" alt="No Image"></a>
+        <a href="#"><img src="{% static 'images/equalizer.jpg' %}" alt="No Image"></a>
+        <a href="#"><img src="{% static 'images/extraction2.jpg' %}" alt="No Image"></a>
+        <a href="#"><img src="{% static 'images/f9.jpg' %}" alt="No Image"></a>                
+      </div>
+      <h1 id="psycho">Psychological Movies</h1>
+      <div class="box">
+        <a href="https://youtu.be/beToTslH17s?si=h-2Y78eayUPa6gNG"><img src="{% static 'images/scream.jpg' %}" alt="No Image"></a>
+        <a href="https://youtu.be/Y-ufZuqTd5c?si=OQcsmJqtK6bQ1Qog"><img src="{% static 'images/silence.jpg' %}" alt="No Image"></a>
+        <a href="https://youtu.be/tH-dZY_6-b0?si=udYx-cjPJkFnoOZ7"><img src="{% static 'images/quiet.jpg' %}" alt="No Image"></a>
+        <a href="https://youtu.be/o6TOax_-A6w?si=YIMDlaB7E9InpMHo"><img src="{% static 'images/ghost.jpg' %}" alt="No Image"></a>
+        <a href="https://youtu.be/acQyrwQyCOk?si=XmrNkrrdnkKw6P-2"><img src="{% static 'images/insidious.jpg' %}" alt="No Image"></a>
+        <a href="https://youtu.be/Y7v0c0ZeXrU?si=6p5KRFZlLPVgULQN"><img src="{% static 'images/navarasa.jpg' %}" alt="No Image"></a>                
+      </div>
+
+      <h1 id="originals">Netflix Originals</h1>
+      <div class="box">
+        <a href="https://youtu.be/XuDwndGaCFo?si=i3z9P5TgZeNtu5rE"><img src="{% static 'images/O1.jpg' %}" alt="No Image"></a>
+        <a href="https://youtu.be/24-YonhNS0Y?si=uQve5DIUanmie8H6"><img src="{% static 'images/O2.jpg' %}" alt="No Image"></a>
+        <a href="https://youtu.be/uhU7xpk7Z0Q?si=4fl2lkUdYY-EjPMq"><img src="{% static 'images/O6.jpg' %}" alt="No Image"></a>
+        <a href="https://youtu.be/mR3ExaGGFio?si=Kek785j9_My23kul"><img src="{% static 'images/O16.jpg' %}" alt="No Image"></a>
+        <a href="https://youtu.be/SzS8Ao0H6Co?si=2mlSzlYJplW2kKiW"><img src="{% static 'images/O15.jpg' %}" alt="No Image"></a>
+        <a href="https://youtu.be/Tln328Upic0?si=2UgCKjygAxF2yF_R"><img src="{% static 'images/O13.jpg' %}" alt="No Image"></a>                
+      </div> 
+      
+    {% else %}
+    <!-- <h1>Hii,Welcome This Is Home_Page</h1> -->
+    <section class="main-container" >
+        <div class="location" id="home">
+            <h1 id="home">Popular on Netflix</h1>
+            <div class="box">
+              <div class="item"><a href="https://youtu.be/fWhlnoAT_Ic?si=wsymoNT8rL_ZHKOJ"><img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/p1.PNG?raw=true" alt="No Image"></a></div>
+              <div class="item"><a href="#"><img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/p2.PNG?raw=true" alt="No Image"></a></div>
+              <div class="item"><a href="#"><img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/p3.PNG?raw=true" alt="No Image"></a></div>
+              <div class="item"><a href="#"><img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/p4.PNG?raw=true" alt="No Image"></a></div>
+              <div class="item"><a href="#"><img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/p5.PNG?raw=true" alt="No Image"></a></div>
+              <div class="item"><a href="#"><img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/p6.PNG?raw=true" alt="No Image"></a></div>
+              <div class="item"><a href="#"><img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/p7.PNG?raw=true" alt="No Image"></a></div>
+              <div class="item"><a href="#"><img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/p8.PNG?raw=true" alt="No Image"></a></div>
+              <div class="item"><a href="#"><img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/p9.PNG?raw=true" alt="No Image"></a></div>
+              <div class="item"><a href="#"><img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/p10.PNG?raw=true" alt="No Image"></a></div>
+              <div class="item"><a href="#"><img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/p11.PNG?raw=true" alt="No Image"></a></div>
+              <div class="item"><a href="#"><img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/p12.PNG?raw=true" alt="No Image"></a></div>        
+            </div>
+        </div>
+      </section>
+      <h1 id="myList">Trending Now</h1>
+      <div class="box">
+        <a href="https://youtu.be/ORa4hPhGrpo?si=-wQc2_WJ6w1gt5jp"><img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/t1.PNG?raw=true" alt="No Image"></a>
+        <a href="#"><img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/t2.PNG?raw=true" alt="No Image"></a>
+        <a href="#"><img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/t3.PNG?raw=true" alt="No Image"></a>
+        <a href="#"><img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/t4.PNG?raw=true" alt="No Image"></a>
+        <a href="#"><img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/t5.PNG?raw=true" alt="No Image"></a>
+        <a href="#"><img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/t6.PNG?raw=true" alt="No Image"></a>                  
+      </div>
+      <h1 id="tvShows">TV Shows</h1>
+      <div class="box">
+        <a href="https://youtu.be/K1_2Y4sIN5Q?si=2kt06EG_fGAf4_-v"><img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/tv1.PNG?raw=true" alt="No Image"></a>
+        <a href="#"><img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/tv2.PNG?raw=true" alt="No Image"></a>
+        <a href="#"><img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/tv3.PNG?raw=true" alt="No Image"></a>
+        <a href="#"><img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/tv4.PNG?raw=true" alt="No Image"></a>
+        <a href="#"><img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/tv5.PNG?raw=true" alt="No Image"></a>
+        <a href="#"><img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/tv6.PNG?raw=true" alt="No Image"></a>
+        <!-- <a href="#"><img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/tv7.PNG?raw=true" alt="No Image"></a>
+        <a href="#"><img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/tv8.PNG?raw=true" alt="No Image"></a>
+        <a href="#"><img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/tv9.PNG?raw=true" alt="No Image"></a>
+        <a href="#"><img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/tv10.PNG?raw=true" alt="No Image"></a>
+        <a href="#"><img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/tv11.PNG?raw=true" alt="No Image"></a>
+        <a href="#"><img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/tv12.PNG?raw=true" alt="No Image"></a>               -->
+      </div>
+      <h1 id="movies">Blockbuster Action & Adventure</h1>
+      <div class="box">
+        <a href="https://youtu.be/-TJ0o4oB0gc?si=k1_LuELu_X9L5dzR"><img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/m1.PNG?raw=true" alt="No Image"></a>
+        <a href="#"><img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/m2.PNG?raw=true" alt="No Image"></a>
+        <a href="#"><img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/m3.PNG?raw=true" alt="No Image"></a>
+        <a href="#"><img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/m4.PNG?raw=true" alt="No Image"></a>
+        <a href="#"><img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/m5.PNG?raw=true" alt="No Image"></a>
+        <a href="#"><img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/m6.PNG?raw=true" alt="No Image"></a>                
+      </div>
+
+      <h1 id="originals">Netflix Originals</h1>
+      <div class="box">
+        <a href="https://youtu.be/icVhc1BcnQY?si=zXDu85a9m3p3Kk9z"><img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/o1.PNG?raw=true" alt="No Image"></a>
+        <a href="#"><img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/o2.PNG?raw=true" alt="No Image"></a>
+        <a href="#"><img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/o3.PNG?raw=true" alt="No Image"></a>
+        <a href="#"><img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/o4.PNG?raw=true" alt="No Image"></a>
+        <a href="#"><img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/o5.PNG?raw=true" alt="No Image"></a>
+        <a href="#"><img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/o6.PNG?raw=true" alt="No Image"></a>                
+      </div>
+    {% endif %}
+</center>
+<script src="{% static 'js/jquery.js' %}"></script>
+<script src="{% static 'js/popper.js' %}"></script>
+<script src="{% static 'js/bootstrap.js' %}"></script>
+<script src="{% static 'js/mdb.js' %}"></script>
+<script src="{% static 'js/all.js' %}"></script>
+{% endblock %}

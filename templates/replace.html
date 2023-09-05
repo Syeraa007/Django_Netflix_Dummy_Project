@@ -1,0 +1,21 @@
+{% extends 'lie.html' %}
+{% load static %}
+
+{% block title %}
+<title>Netflix change user password page</title>
+{% endblock %}
+
+{% block body_block %}
+<center><h1><b> Change Password Here</b></h1></center>
+<center>
+    <form action="" method="post">
+     {% csrf_token %}
+     <br><br><br>
+     <table>
+         <label for="password">New Password : </label>&NonBreakingSpace;
+         <input type="password" name="password" id="password">
+     </table><br>
+     <input type="submit" value="Change Passcode">
+    </form>
+ </center>
+{% endblock %}

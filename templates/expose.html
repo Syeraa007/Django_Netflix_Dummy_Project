@@ -1,0 +1,18 @@
+{% extends 'lie.html' %}
+{% load static %}
+
+{% block title %}
+<title>Netflix user display page</title>
+{% endblock %}
+
+{% block body_block %}
+<center><h1><b> Display Details Here</b></h1></center>
+<center>
+    <h3>{{ UO.username }}</h3>
+    <h3>{{ UO.email }}</h3>
+    <h3>{{ PO.address }}</h3>
+    <h3>{{ PO.picture.url }}</h3>
+    <img src="{{PO.picture.url}}" class="rounded-circle z-depth-10"
+              alt="avatar image" height="200" width="200px">
+</center>
+{% endblock %}

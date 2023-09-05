@@ -1,0 +1,90 @@
+{% extends 'lie.html' %}
+{% load static %}
+
+{% block title %}
+<title>Netflix user login page </title>
+{% endblock %}
+
+{% block body_block %}
+<center><h1><b> LogIn Here</b></h1></center>
+<center>
+  <div class="login-container">
+    <h1>Login</h1>
+    <form action="" method="POST">
+        {% csrf_token %}
+        <label for="username">USERNAME</label>
+      <input type="text" placeholder="Username" name="username" id="username" required>
+      <label for="password">PASSWORD</label>
+      <input type="password" id="password" placeholder="Password" name="password" required><br>
+      <button type="submit">Login</button>
+    </form>
+    <div class="links">
+      <a href="{% url 'clear' %}">Forgot Password?</a>
+      <a href="{% url 'join' %}">Sign Up</a>
+    </div>
+  </div>
+</center>
+<style>
+    body {
+        background-color: #f2f2f2;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      
+      .login-container {
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        margin: 100px auto;
+        max-width: 300px;
+        padding: 20px;
+      }
+      
+      h1 {
+        text-align: center;
+      }
+      
+      form {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      input[type="text"],
+      input[type="password"] {
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        margin-bottom: 10px;
+        padding: 10px;
+      }
+      
+      button {
+        background-color: #4caf50;
+        border: none;
+        border-radius: 3px;
+        color: #fff;
+        cursor: pointer;
+        padding: 10px;
+      }
+      
+      button:hover {
+        background-color: #45a049;
+      }
+      
+      .links {
+        margin-top: 20px;
+        text-align: center;
+      }
+      
+      .links a {
+        color: #999;
+        margin: 0 10px;
+      }
+      
+      .links a:hover {
+        color: #333;
+      }
+      
+</style>
+{% endblock %}
+

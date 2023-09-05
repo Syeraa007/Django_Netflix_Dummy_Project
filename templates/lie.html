@@ -1,0 +1,120 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  {% block title %}
+  <title>Netflix Watch Online</title>
+  {% endblock %}
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="{% static 'css/home.css' %}">
+  
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Netflix</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js" integrity="sha384-3LK/3kTpDE/Pkp8gTNp2gR/2gOiwQ6QaO7Td0zV76UFJVhqLl4Vl3KL1We6q6wR9" crossorigin="anonymous"></script>
+  
+  <link rel="stylesheet" href="{% static 'css/home.css' %}">
+</head>
+<body>
+  <div class="wrapper">
+
+    <!-- HEADER -->
+    <header>
+      <div class="netflixLogo">
+        <a id="logo" href="#home"><img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/logo.PNG?raw=true" alt="Logo Image"></a>
+      </div>      
+      <nav class="main-nav">                
+        <a href="{% url 'home' %}">Home</a>
+        <a href="#tvShows">TV Shows</a>
+        <a href="#movies">Movies</a>
+        <a href="#crime">Crime-Thriller</a>
+        <a href="#psycho">Psychologics</a>
+        <a href="#originals">Originals</a>
+        <a href="#recent">Recently Added</a>          
+      </nav>
+      <nav class="sub-nav">
+        <a href="#"><i class="fas fa-search sub-nav-logo"></i></a>
+        <a href="#"><i class="fas fa-bell sub-nav-logo"></i></a>
+        <a class="nav-link" href="{% url 'join' %}">Register</a>
+        <!-- <a href="#">Account</a> -->
+            {% if user.is_authenticated %}
+            <select id="dropdown">
+              <option value="">Genres</option>
+              <option value="{% url 'movies' %}">Movie</option>
+              <option value="{% url 'anime' %}">Anime</option>
+              <option value="{% url 'show' %}">TV Shows</option>
+              <option value="{% url 'originals' %}">Originals</option>
+              <option value="{% url 'drama' %}">Dramas</option>
+              <option value="{% url 'documentaries' %}">Documents</option>
+              <option value="{% url 'kid' %}">Kids</option>
+              <!-- <option value="#">adventure</option> -->
+            </select>
+            <select id="urlSelect">
+              <option value="">Account</option>
+              <option value="{% url 'expose' %}">Profile</option>
+              <option value="{% url 'replace' %}">Change Password</option>
+              <option value="{% url 'exit' %}">Signout</option>
+          </select>
+          <!-- <button id="navigateButton">Go</button> -->
+            
+                <!-- <a class="nav-link" href="{% url 'exit' %}">SignOut</a>
+          <a class="nav-link" href="{% url 'expose' %}">User Details</a>
+          <a class="nav-link" href="{% url 'replace' %}">Change Lock</a> -->
+        {% else %}
+          <a class="nav-link" href="{% url 'enter' %}">SignIn</a>        
+        {% endif %}
+    </ul>
+      </nav>      
+    </header>
+    <br><br>
+<!-- END OF HEADER -->
+    {% block body_block %}
+    {% endblock %}
+
+    <!-- LINKS -->
+    <section class="link">
+      <div class="logos">
+        <a href="#"><i class="fab fa-facebook-square fa-2x logo"></i></a>
+        <a href="#"><i class="fab fa-instagram fa-2x logo"></i></a>
+        <a href="#"><i class="fab fa-twitter fa-2x logo"></i></a>
+        <a href="#"><i class="fab fa-youtube fa-2x logo"></i></a>
+      </div>
+      <div class="sub-links">
+        <ul>
+          <li><a href="#">Audio and Subtitles</a></li>
+          <li><a href="#">Audio Description</a></li>
+          <li><a href="#">Help Center</a></li>
+          <li><a href="#">Gift Cards</a></li>
+          <li><a href="#">Media Center</a></li>
+          <li><a href="#">Investor Relations</a></li>
+          <li><a href="#">Jobs</a></li>
+          <li><a href="#">Terms of Use</a></li>
+          <li><a href="#">Privacy</a></li>
+          <li><a href="#">Legal Notices</a></li>
+          <li><a href="#">Corporate Information</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+    </section>
+    <!-- END OF LINKS -->
+
+    <!-- FOOTER -->
+    <footer>
+      <p>&copy 1997-2018 Netflix, Inc.</p>
+      <p>Carlos Avila &copy 2018</p>
+    </footer>
+  </div>
+</body>
+</html>
+<!-- partial -->
+<script src="{% static 'js/home.js' %}">
+</script>
+</body>
+</html>

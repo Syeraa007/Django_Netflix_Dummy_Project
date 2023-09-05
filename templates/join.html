@@ -1,0 +1,21 @@
+{% extends 'lie.html' %}
+{% load static %}
+
+{% block title %}
+<title>Netflix user Registartion page </title>
+{% endblock %}
+
+{% block body_block %}
+    <center><h1><b> Registration Here</b></h1></center>
+    <center>
+        <form action="" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <table>
+                {{UFO.as_table}}
+                {{PFO.as_table}}
+            </table>
+            <br>
+            <input type="submit" value="Register">
+        </form>
+    </center>
+{% endblock %}

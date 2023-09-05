@@ -1,0 +1,23 @@
+{% extends 'lie.html' %}
+{% load static %}
+
+{% block title %}
+<title>Netflix forgotten user password page</title>
+{% endblock %}
+
+{% block body_block %}
+<center><h1><b> Forgot Password Here</b></h1></center>
+<center>
+    <table>
+        <br><br>
+        <form action="" method="post">
+            {% csrf_token %}
+            <label for="username">Username : </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="text" name="username" id="username"><br><br>
+            <label for="password">Password : </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="password" name="password" id="password"><br><br>
+            <input type="submit" value="Reset Passcode">
+        </form>
+    </table>
+</center>
+{% endblock %}
